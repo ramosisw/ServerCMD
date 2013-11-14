@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.wayproyect.servercmd.entidades">
+	<class name="Log" table="tbl_log">
+		<id name="id" type="int" column="id">
+			<generator class="native" />
+		</id>
+		<property name="datetime" column="datetime" type="string" />
+		<property name="usuario" column="usuario" type="string" />
+                <property name="accion" column="accion" type="string" />
+	</class>
+
+</hibernate-mapping>

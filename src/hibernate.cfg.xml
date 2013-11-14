@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd" >
+<hibernate-configuration>
+	<session-factory>
+		<!-- Dialecto de la base de datos -->
+		<property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+		
+		<!-- parametros para la conexion a la base de datos -->
+		<property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+		<property name="hibernate.connection.url">jdbc:derby:dbservercmd;create=true</property>
+		
+
+		<!-- Configuracion del pool interno -->
+		<!-- property name="hibernate.connection.pool_size">1</property -->
+
+		<!-- Otras propiedades importantes -->
+		<property name="show_sql">true</property>
+		<!-- property name="hbm2ddl.auto">create-drop</property -->
+
+		<!-- Archivos de mapeo -->
+		<mapping resource="com/wayproyect/servercmd/persistencia/mappings/Log.hbm.xml" />
+		
+	</session-factory>
+</hibernate-configuration>
